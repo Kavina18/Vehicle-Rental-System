@@ -6,11 +6,11 @@ import source from './Logo_Gocars.png';
 export function Signup() {
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-    function handleSubmit(event){
+    function handleSubmit(event) {
         event.preventDefault();
-        navigate("/login");
+        navigate('/login');
     };
 
     return (
@@ -23,8 +23,8 @@ export function Signup() {
                     <input id="username" type="text" required value={username} onChange={(event) => setUsername(event.target.value)} />
                 </div>
                 <div>
-                    <label id="lemail" htmlFor="email">Email:</label>
-                    <input id="email" type="email" required value={email} onChange={(event) => setEmail(event.target.value)} />
+                    <label id="lpassword" htmlFor="password">Password:</label>
+                    <input id="password" type="password" required value={password} onChange={(event) => setPassword(event.target.value)} />
                 </div>
                 <button type="submit" className='sign_up_button'>SignUp</button>
                 <p className='already_sign_in'>Already have an account? <a href="/login">Login</a></p>
